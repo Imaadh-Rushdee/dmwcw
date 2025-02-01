@@ -1,0 +1,87 @@
+body{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    background-image: url("back3.jpg");
+}
+#username{
+    height: 25pt;
+    width: 210pt;
+    padding-left: 10pt;
+    border-radius: 5pt;
+    border-color:transparent ;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#username:active
+{
+    border-color: blue;
+}
+#password:active
+{
+    border-color: blue;
+}
+#password{
+    height: 25pt;
+    width: 210pt;
+    padding-left: 10pt;
+    border-radius: 5pt;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-color:transparent ;
+
+}
+#loginform{
+    
+}
+#sign_in{
+    font-size: 30pt;
+    color: black;
+    font-family:Arial;
+}
+#login{
+    height: 25pt;
+    width: 220pt;
+    border-radius: 5pt;
+    font-family: 'Segoe UI';
+    color: blue;
+    border-color: blue;
+    background: transparent;
+    cursor: pointer;
+    font-size: 12pt;
+}
+#login:hover
+{
+    background-color: blue;
+    color: aliceblue;
+    transition: 0.3s;
+}
+#login:active
+{
+    
+    background: transparent;
+    color: blue;
+    transition: 0.3s;
+}
+.child
+{
+    justify-items: center;
+    border-style: solid;
+    margin: auto;
+    padding-top: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    width: fit-content;
+    height: fit-content;
+    background: rgba(red, green, blue, alpha);
+    border-radius: 16pt;
+    box-shadow: 50pt 50pt 50pt 50pt rgba(0, 0, 0, 0);
+    backdrop-filter: blur(10px);
+    border: 1px;
+    -webkit-backdrop-filter: blur(10px);
+    
+}
+.parent
+{
+}

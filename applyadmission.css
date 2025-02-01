@@ -1,0 +1,105 @@
+
+body
+{
+    display: flex;
+    flex-direction: column;
+    padding-top: 68pt;
+    padding-right: 80pt;
+    padding-left: 80pt;
+    background-image: url("back3.jpg");
+    justify-content: center;
+    align-items: center;
+    
+}
+#apply
+{
+    border-radius: 5px;
+    padding: 5px;
+    border: 2px solid blue;
+    border-color: blue;
+    background-color: transparent;
+    color: blue;
+    transition: 0.3s;
+
+
+}
+#apply:hover
+{
+    background-color: blue;
+    color: aliceblue;
+}
+#apply:active
+{
+    border: 2px solid blue;
+    border-color: blue;
+    background-color: transparent;
+    color: blue;
+}
+.ele
+{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0;
+}
+.bd
+{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    padding: 50px;
+    font-weight: bold;
+    font-size: 12pt;
+    border-radius: 10pt;
+    border-color: rgb(0, 0, 0);
+    margin: auto;
+    box-shadow: 50pt 50pt 50pt 50pt rgba(0, 0, 0, 0);
+    justify-content: center;
+    row-gap: 10px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+.att
+{
+    border-radius: 5pt;
+    border: 0;
+    width: 500px;
+    height: 35px;
+    align-items: center;
+    padding: 10px;
+    font-size: 12pt;
+    outline-color: blue;
+
+}
+
+.att1
+{
+    border-radius: 5pt;
+    border: 0;
+    width: 500px;
+    height: 35px;
+    align-items: center;
+    padding-left: 10px;
+    outline-color: blue;
+    font-size: 12pt;
+}
+.pg
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0px;
+    background-color: transparent;
+}
+.fotcol
+{
+    width: 831pt;
+}
+@media (max-width: 300px)
+{
+    body
+    {
+        flex-wrap: wrap;
+    }
+}

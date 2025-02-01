@@ -1,0 +1,139 @@
+
+body
+{
+    display: flex;
+    flex-direction: column;
+    padding-top: 68pt;
+    padding-right: 80pt;
+    padding-left: 80pt;
+    
+}
+.main-data
+{
+    display: grid;
+    width: fit-content;
+    grid-template-columns: 80px 150px max-content max-content;
+    grid-template-rows: 70px 70px max-content max-content;
+    font-size: 15px;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid black;
+}
+#firstname
+{
+    grid-column: 3;
+    padding: 20px;
+    grid-row: 1;
+}
+#fname
+{
+    grid-column: 4;
+    grid-row: 1;
+}
+#lname
+{
+    grid-column: 4;
+    grid-row: 2;
+}
+#iage
+{
+    grid-column: 2;
+    grid-row: 3;
+    width: 100pt;
+}
+#dob
+{
+    grid-column: 4;
+    grid-row: 3;
+}
+#doa
+{
+    grid-column: 4;
+    grid-row: 4;
+}
+#grade
+{
+    grid-column: 2;
+    grid-row: 4;
+    width: 100pt;
+
+}
+#lastname
+{
+    padding: 20px;
+    grid-column: 3;
+    grid-row: 2;
+}
+.stddata
+{
+    height: 25pt;
+    width: 250pt;
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 8px;
+}
+#age
+{
+    grid-column: 1;
+    grid-row: 3;
+    text-align: center;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#dateofbirth
+{
+    grid-column: 3;
+    padding: 20px;
+    grid-row: 3;
+}
+.box
+{
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+    height: 120px;
+    width:220px;
+}
+#img
+{
+    height: 120px;
+    width:220px;
+    padding: 10px;
+}
+#dateofadmission
+{
+    padding: 20px;
+    grid-column: 3;
+    grid-row: 4;
+}
+#currentgrade
+{
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    grid-column: 1;
+    grid-row: 4;
+}
+.pg
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0px;
+    background-color: transparent;
+}
+.fotcol
+{
+    width: 831pt;
+}
+@media (max-width: 300px)
+{
+    body
+    {
+        flex-wrap: wrap;
+    }
+}

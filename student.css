@@ -1,0 +1,163 @@
+.pg
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+}
+.fotcol
+{
+    width: 831pt;
+}
+.navbar
+{
+    display: flex;
+}
+.cardgroup
+{
+    display: flex;
+    padding-top: 20pt;
+    padding-bottom: 20pt;
+    border: 1px solid black;
+    justify-content: space-evenly;
+    row-gap: 15pt;
+    
+    flex-wrap: wrap;
+    flex-grow: 1;
+    flex-shrink: 1;
+    
+}
+.cards
+{
+    
+    border-radius: 10pt;
+    width: 340px;
+    height: min-content;
+
+}
+.sub
+{
+    
+    width: 120px;
+    height: 100px;
+
+}
+#subject2
+{
+    
+    border-radius: 10pt;
+    width: 120px;
+    height: 100px;
+
+}
+
+.msg
+{
+    border: 1pt;
+    border-radius: 10pt;
+    border-color: rgb(0, 0, 0);
+    width: 300pt;
+    height: 400pt;
+    border-style: solid;
+    padding-top: 10pt;
+    padding-left: 20pt;
+    padding-right: 10pt;
+    padding-bottom: 10pt;
+    background: rgba(red, green, blue, alpha);
+    margin: auto;
+    box-shadow: 50pt 50pt 50pt 50pt rgba(0, 0, 0, 0);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+.named
+{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0px;
+}
+#footerp
+{
+    font-size: 10pt;
+}
+.rec3
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    row-gap: 0px;
+}
+.mybnt
+{
+    display: flex;
+    padding-left: 15px;
+    width: 170pt;
+    height: 30pt;
+    border-radius: 0;
+    font-size: 12pt;
+    align-items: center;
+    border: 0;
+    transition:all ease-out 300ms;
+}
+
+
+.mybnt:hover
+{
+    border: 1;
+    border-color: blue;
+    background-color: darkblue;
+    color: aliceblue;
+}
+#msgtxt
+{
+    font-size: 20pt;
+}
+#bntcard
+{
+    max-height: 100%;
+    max-width: 100%;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    
+}
+#rec5
+{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0pt;
+}
+.rec
+{
+    display: flex;
+    left: 15px;
+    top: 80pt;
+    row-gap: 0;
+    flex-wrap: wrap;
+    position: fixed;
+}
+.rec4
+{
+    display: flex;
+    left: 15px;
+    top: 80pt;
+    row-gap: 0;
+    flex-wrap: wrap;
+    position: fixed;
+}
+.breadcrumb
+{
+    font-size: small;
+}
+@media (max-width: 300px)
+{
+    .cardgroup
+    {
+        flex-wrap: wrap;
+    }
+    body
+    {
+        flex-wrap: wrap;
+    }
+}
