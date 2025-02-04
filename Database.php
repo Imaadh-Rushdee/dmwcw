@@ -12,6 +12,5 @@ if(!$conn)
 }
 else{
 
-    echo"Successfully Connected";
 }
 ?>

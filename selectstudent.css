@@ -9,17 +9,20 @@
 .bc
 {
     font-size: 14px;
-}px
+}
 .myf
 {
     height: 30px;
 }
-#name
+#cardname
 {
     margin-right: auto;
 }
 
-
+#del
+{
+    color: red;
+}
 body
 {
     display: flex;

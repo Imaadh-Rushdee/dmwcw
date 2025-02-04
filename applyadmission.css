@@ -6,81 +6,293 @@ body
     padding-top: 68pt;
     padding-right: 80pt;
     padding-left: 80pt;
-    background-image: url("back3.jpg");
-    justify-content: center;
-    align-items: center;
     
 }
-#apply
-{
-    border-radius: 5px;
-    padding: 5px;
-    border: 2px solid blue;
-    border-color: blue;
-    background-color: transparent;
-    color: blue;
-    transition: 0.3s;
-
-
-}
-#apply:hover
-{
-    background-color: blue;
-    color: aliceblue;
-}
-#apply:active
-{
-    border: 2px solid blue;
-    border-color: blue;
-    background-color: transparent;
-    color: blue;
-}
-.ele
+.studentdata
 {
     display: flex;
-    flex-direction: column;
-    row-gap: 0;
-}
-.bd
-{
-    display: flex;
-    flex-direction: column;
-    width: fit-content;
-    padding: 50px;
-    font-weight: bold;
-    font-size: 12pt;
-    border-radius: 10pt;
-    border-color: rgb(0, 0, 0);
-    margin: auto;
-    box-shadow: 50pt 50pt 50pt 50pt rgba(0, 0, 0, 0);
     justify-content: center;
-    row-gap: 10px;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-}
-.att
-{
-    border-radius: 5pt;
-    border: 0;
-    width: 500px;
-    height: 35px;
     align-items: center;
-    padding: 10px;
-    font-size: 12pt;
-    outline-color: blue;
+}
+.main-data
+{
+    display: grid;
+    width: fit-content;
+    grid-template-columns: 120px 350px 120px 350px;
+    grid-template-rows: 90px 90px 70px 70px 70px 70px 70px 70px;
+    font-size: 15px;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+#firstname
+{
+    grid-column: 1;
+    grid-row: 4;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#addmi
+{
+    grid-column: 1;
+    grid-row: 3;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#adress
+{
+    grid-column: 1;
+    grid-row: 7;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#add
+{
+    grid-column: 2 /3 ;
+    width: 805px;
+    grid-row: 7;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#mothersname
+{
+    grid-column: 1;
+    grid-row: 8;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#fathersname
+{
+    grid-column: 1;
+    grid-row: 9;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#mothercontact
+{
+    grid-column: 3;
+    grid-row: 8;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#mcno
+{
+    grid-row: 8;
+    grid-column: 4;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#ftcno
+{
+    grid-row: 9;
+    grid-column: 4;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#fathercontact
+{
+    grid-column: 3;
+    grid-row: 9;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#ftname
+{
+    grid-column: 2;
+    grid-row: 9;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#mname
+{
+    grid-row: 8;
+    grid-column: 2;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#fname
+{
+    grid-column: 2;
+    grid-row: 4;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#adminno
+{
+    grid-column: 2;
+    grid-row: 3;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#lname
+{
+    grid-column: 4;
+    grid-row: 4;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#genderse
+{
+    grid-column: 4;
+    grid-row: 3;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 5px;
+    height: 34pt;
+    width: 250pt;
+}
+#iage
+{
+    grid-column: 2;
+    grid-row: 6;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#dob
+{
+    grid-column: 2;
+    grid-row: 5;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#doa
+{
+    grid-column: 4;
+    grid-row: 5;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#grade
+{
+    grid-column: 4;
+    grid-row: 6;
+    padding-top: 20px;
+    padding-bottom: 20px;
 
 }
-
-.att1
+#lastname
 {
-    border-radius: 5pt;
-    border: 0;
-    width: 500px;
-    height: 35px;
+    grid-column: 3;
+    grid-row: 4;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#gender
+{
+    grid-column: 3;
+    grid-row: 3;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.stddata
+{
+    display: flex;
+    height: 25pt;
+    width: 250pt;
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 8px;
+}
+#age
+{
+    grid-column: 1;
+    grid-row: 6;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#dateofbirth
+{
+    grid-column: 1;
+    grid-row: 5;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.my
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding-left: 10px;
-    outline-color: blue;
-    font-size: 12pt;
+}
+#img
+{
+    width:180px;
+    height: 150px;
+    border-radius: 10px;
+}
+#dateofadmission
+{
+    grid-column: 3;
+    grid-row: 5;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#currentgrade
+{
+    grid-column: 3;
+    grid-row: 6;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.bnt
+{
+    display: flex;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    grid-row-start: 10;
+    grid-row-end: 12;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    column-gap: 15px;
+
+}
+#update
+{
+    border: 2px solid blue;
+    color:white;
+    background-color: blue;
+    width: 200pt;
+    border-radius: 10px;
+    height: 30pt;
+    transition: 0.3s;
+}
+#update:hover
+{
+    background-color: darkblue;
+}
+#update:active
+{
+    border-color: blue;
+    background-color: transparent;
+    color: blue;
+}
+#noupdate:hover
+{
+    background-color: red;
+    color: white;
+}
+#noupdate
+{
+    border: 2px solid red;
+    color: red;
+    background-color: transparent;
+    width: 200pt;
+    border-radius: 10px;
+    height: 30pt;
+    transition: 0.3s;
+}
+#noupdate:active
+{
+    background-color: transparent;
+    color: red;
+    border-color: red;
 }
 .pg
 {

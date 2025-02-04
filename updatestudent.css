@@ -19,7 +19,7 @@ body
     display: grid;
     width: fit-content;
     grid-template-columns: 120px 350px 120px 350px;
-    grid-template-rows: 70px 70px 70px 70px 70px 70px 70px 70px;
+    grid-template-rows: 90px 90px 70px 70px 70px 70px 70px 70px;
     font-size: 15px;
     align-items: center;
     padding: 20px;
@@ -33,6 +33,13 @@ body
     padding-top: 20px;
     padding-bottom: 20px;
 }
+#addmi
+{
+    grid-column: 1;
+    grid-row: 3;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
 #adress
 {
     grid-column: 1;
@@ -40,6 +47,7 @@ body
     padding-top: 20px;
     padding-bottom: 20px;
 }
+
 #add
 {
     grid-column: 2 /3 ;
@@ -111,12 +119,29 @@ body
     padding-top: 20px;
     padding-bottom: 20px;
 }
+#adminno
+{
+    grid-column: 2;
+    grid-row: 3;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
 #lname
 {
     grid-column: 4;
     grid-row: 4;
     padding-top: 20px;
     padding-bottom: 20px;
+}
+#genderse
+{
+    grid-column: 4;
+    grid-row: 3;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 5px;
+    height: 34pt;
+    width: 250pt;
 }
 #iage
 {
@@ -139,18 +164,18 @@ body
     padding-top: 20px;
     padding-bottom: 20px;
 }
-#grade
-{
-    grid-column: 4;
-    grid-row: 6;
-    padding-top: 20px;
-    padding-bottom: 20px;
-
-}
 #lastname
 {
     grid-column: 3;
     grid-row: 4;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#gender
+{
+    grid-column: 3;
+    grid-row: 3;
     padding-top: 20px;
     padding-bottom: 20px;
 }
@@ -181,8 +206,10 @@ body
 .box
 {
     display: flex;
+    flex-direction: column;
     grid-row-start: 1;
-    grid-row-end: 4;
+    grid-row-end: 3;
+    row-gap: 20px;
     grid-column-start: 1;
     grid-column-end: 5;
     justify-content: center;
@@ -191,7 +218,7 @@ body
 #img
 {
     width:180px;
-    height: 180px;
+    height: 150px;
     border-radius: 10px;
 }
 #dateofadmission
@@ -274,6 +301,10 @@ body
     align-items: center;
     padding-top: 0px;
     background-color: transparent;
+}
+.grade
+{
+    height: 50px;
 }
 .fotcol
 {
