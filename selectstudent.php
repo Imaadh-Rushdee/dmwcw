@@ -134,8 +134,10 @@ function confirmDelete() {
                     <td><a href="updatestudent.php?id=<?php echo $row['addNo']; ?>" id="upd">Update</a> &nbsp; &nbsp;<a href="deletestudent.php?id=<?php echo $row['addNo']; ?>" onclick="return confirmDelete();" id="del">Delete</a></td>
                   </tr>
                   <?php 
-                }
-              }
+                      }
+                  } else {
+                      echo "<tr><td colspan='7' class='text-center'>No records found for grade '".htmlspecialchars($grade)."'</td></tr>";
+                  }
                   ?>
                 </tbody>
               </table>

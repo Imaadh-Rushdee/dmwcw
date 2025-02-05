@@ -1,10 +1,10 @@
 <?php
 session_start();
-if (!isset($_SESSION['user_name'])) {
+if (!isset($_SESSION['username'])) {
     header("Location: login.php");
     exit();
 }
-$username = $_SESSION['user_name'];
+$username = $_SESSION['username'];
 ?>
 
 
@@ -64,12 +64,11 @@ $username = $_SESSION['user_name'];
       <div class="rec">
         <div class="rec3 card">
           <div class="card-body" id="rec2">
-            <blockquote class="blockquote mb-0" id="rec5">
                 <label for="" class="mybnt"> Quick Access</label>
               <button type="button" class="mybnt">Home</button>
               <button type="button" class="mybnt">Photos</button>
               <a href="applyadmission.php"><button type="button" class="mybnt">Student Addmission</button></a>
-              <button type="button" class="mybnt">Daily Attendance</button>
+              <a href="user.php"><button type="button" class="mybnt">Add User</button></a>
               <button type="button" class="mybnt">Parents</button>
               <button type="button" class="mybnt">Messages</button>
             </blockquote>
@@ -120,9 +119,11 @@ $username = $_SESSION['user_name'];
               </div>
               <div class="cards">
                 <div class="card">
+                  <a href="viewuser.php">
                   <img src="back2.jpg" class="sub card-img-top" alt="...">
+                  </a>
                   <div class="card-body">
-                    <h5 class="card-title">Staff</h5>
+                    <h5 class="card-title">All Users</h5>
                   </div>
                 </div>
               </div>

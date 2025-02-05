@@ -1,25 +1,21 @@
 <?php
 include 'Database.php'; // Ensure your database connection is correct
-$addNO = $_GET['id'];
+$userid = $_GET['id'];
 
 if (isset($_POST['update'])) {
+
     $firstName = $_POST['fn'];
     $lastName = $_POST['ln'];
-    $address = $_POST['ad'];
-    $gender = $_POST['gn'];
-    $age = $_POST['ag'];
-    $dob = $_POST['db'];
-    $doa = $_POST['da'];
-    $mname = $_POST['mn'];
-    $fname = $_POST['fgn'];
-    $mcontact = $_POST['mc'];
-    $fgcontact = $_POST['fc'];
-    $currentGrade = $_POST['cg'];
-    $addNo = $_POST['an'];
+    $adress = $_POST['ad'];
+    $username = $_POST['mn'];
+    $email = $_POST['em'];
+    $contact = $_POST['mc'];
+    $password = $_POST['ps'];
+    $type = $_POST['gn'];
 
     $upload_dir = "uploads/";
     $product_image = $_FILES['customFile2'];
-    $image_path = $_POST['existingImagePath']; // Default to existing image path
+    $image_path = $_POST['existingImagePath']; 
 
     // Handle new file upload if available
     if (!empty($product_image['name'])) {
@@ -33,27 +29,22 @@ if (isset($_POST['update'])) {
     }
 
     // Update query
-    $sqlUpdate = "UPDATE student SET 
+    $sqlUpdate = "UPDATE user SET 
         lastname = '$lastName',
         firstname = '$firstName',
-        adress = '$address',
-        age = '$age',
-        gender = '$gender',
-        dob = '$dob',
-        doa = '$doa',
-        mname = '$mname',
-        fname = '$fname',
-        mcontact = '$mcontact',
-        fgcontact = '$fgcontact',
-        studentphoto = '$image_path',
-        currentgrade = '$currentGrade',
-        imagename = '$image_name'
-        WHERE addNo = '$addNo'";
+        adress = '$adress',
+        username = '$username',
+        email = '$email',
+        contact = '$contact',
+        password = '$password',
+        usertype = '$type',
+        userphoto = '$image_path'
+        WHERE user_id = '$userid'";
 
     if (mysqli_query($conn, $sqlUpdate)) {
         echo "<script>
                 alert('Record updated successfully.');
-                window.location.href = 'selectstudent.php?type=$type';
+                window.location.href = 'viewuser.php?type=$type';
               </script>";
         exit;
     } else {
