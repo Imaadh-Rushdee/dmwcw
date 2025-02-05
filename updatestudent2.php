@@ -1,5 +1,10 @@
 <?php
 include 'Database.php'; // Ensure your database connection is correct
+$place = 'default_dashboard.php'; // Fallback if no source provided
+
+if (isset($_GET['place'])) {
+    $place = $_GET['place']; // Get the source page
+}
 $addNO = $_GET['id'];
 
 if (isset($_POST['update'])) {
@@ -28,7 +33,11 @@ if (isset($_POST['update'])) {
 
         // Attempt to move the uploaded file
         if (!move_uploaded_file($product_image["tmp_name"], $image_path)) {
-            die("File upload failed.");
+
+            echo "<script>
+            alert('Photo was Not Uploaded');
+            </script>";
+            $image_path = "no image";
         }
     }
 
@@ -53,7 +62,7 @@ if (isset($_POST['update'])) {
     if (mysqli_query($conn, $sqlUpdate)) {
         echo "<script>
                 alert('Record updated successfully.');
-                window.location.href = 'selectstudent.php?type=$type';
+                window.location.href = 'selectstudent.php?type=$type &place=$place';
               </script>";
         exit;
     } else {

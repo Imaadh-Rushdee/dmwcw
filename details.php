@@ -48,26 +48,12 @@ $result = mysqli_query($conn, $sql);
                 <blockquote class="named blockquote mb-0">
                     <div class="up">
                         <label id="cardname" name="heading"><?php echo htmlspecialchars($type); ?></label>
-                        <div class="col-md-6" id="search">
-                          <form class="myf d-flex" action="updateuser.php?place=<?php echo $place; ?>" method="GET">
-                            <div class="input-group">
-                                <input class="form-control form-control-lg" type="search" name="id" placeholder="Enter User ID to Search" aria-label="Search">
-                                <button class="btn btn-primary px-4" type="submit">Update <i class="bi bi-search"></i></button>
-                            </div>
-                          </form>
-                        </div>
-                        <a href="user.php?place=<?php echo $place; ?>">
-                          <button class="btn btn-primary" type="submit" style="height: 45px; width: 120px; padding-left: 10px;">New User</button>
-                        </a>
                     </div>
                 
                     <nav aria-label="breadcrumb" class="bc">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="viewuser.php?type=Director">Directors</a></li>
-                            <li class="breadcrumb-item"><a href="viewuser.php?type=Teacher">Teachers</a></li>
-                            <li class="breadcrumb-item"><a href="viewuser.php?type=Student">Students</a></li>
-                            <li class="breadcrumb-item"><a href="viewuser.php?type=Parent">Parents</a></li>
-                            <li class="breadcrumb-item"><a href="viewuser.php?type=Principal">Principal</a></li>
+                            <li class="breadcrumb-item"><a href="details.php?type=Teacher">Teachers</a></li>
+                            <li class="breadcrumb-item"><a href="details.php?type=Student">Students</a></li>
                         </ol>
                     </nav>
                 </blockquote>

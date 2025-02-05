@@ -1,9 +1,9 @@
 <html>
     <head>
-        <title>Student</title>
+        <title>Parent</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="student.css">
+        <link rel="stylesheet" href="parent.css">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
@@ -15,7 +15,7 @@
     <body><nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
 
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
+          <a class="navbar-brand" href="#">LOGO</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -54,12 +54,12 @@
         <div class="rec3 card">
           <div class="card-body" id="rec2">
             <blockquote class="blockquote mb-0" id="rec5">
-              <button type="button" class="mybnt">Home</button>
-              <button type="button" class="mybnt">Photos</button>
-              <button type="button" class="mybnt">example</button>
-              <button type="button" class="mybnt">example2</button>
-              <button type="button" class="mybnt">example3</button>
-              <button type="button" class="mybnt">example4</button>
+              <a href="#top"><button type="button" class="mybnt">Home</button></a>
+              <button type="button" class="mybnt">Child’s Information</button>
+              <button type="button" class="mybnt">Grades & Performance</button>
+              <button type="button" class="mybnt">Teachers</button>
+              <button type="button" class="mybnt">Subjects</button>
+              <button type="button" class="mybnt">Fees & Payments</button>
             </blockquote>
           </div>
         </div>
@@ -84,16 +84,20 @@
             </div>
           </div>
           <br><br>
-          <h3>Hello Student!</h3>
+          <h3>Hello Parent!</h3>
+          <h6>Welcome to your Parent Dashboard! Here, you can track your child’s academic progress, attendance, and fees in one place. View their subjects and teachers, check upcoming events, and stay updated with important notifications. Easily access grade reports, attendance summaries, and fee details. Stay connected and informed about your child’s education journey.</h6>
           <br><br>
           
           <div class="card-group">
             <div class="cardgroup">
               <div class="cards">
                 <div class="card">
-                  <img src="back2.jpg" class="sub card-img-top" alt="...">
+                  <a href="login.html">
+                    <img src="back4.jpg" class="sub card-img-top" alt="..."></a>
                   <div class="card-body">
-                    <h5 class="card-title">History</h5>
+                    <h5 class="card-title">Child’s Information</h5>
+                    <h6>View your child's basic details, including name, grade, and school year, all in one place.</h6>
+
                     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                   </div>
                 </div>
@@ -101,18 +105,20 @@
               <div class="cards">
                 <div class="card">
                   <a href="login.html">
-                  <img src="back2.jpg" class="sub card-img-top" alt="..."></a>
+                  <img src="back4.jpg" class="sub card-img-top" alt="..."></a>
                   <div class="card-body">
-                    <h5 class="card-title">Science</h5>
+                    <h5 class="card-title">Grades & Performance</h5>
+                    <h6>Stay updated on your child’s latest exam scores and academic progress.</h6><br>
                     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                   </div>
                 </div>
               </div>
               <div class="cards">
                 <div class="card">
-                  <img src="back2.jpg" class="sub card-img-top" alt="...">
+                  <img src="back4.jpg" class="sub card-img-top" alt="...">
                   <div class="card-body">
-                    <h5 class="card-title">Mathematics</h5>
+                    <h5 class="card-title">Teachers</h5>
+                    <h6>See the list of teachers assigned to your child’s subjects, along with their contact details and office hours.</h6><br>
                     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                   </div>
                 </div>
@@ -120,9 +126,10 @@
               
               <div class="cards">
                 <div class="card">
-                  <img src="back2.jpg" class="sub card-img-top" alt="...">
+                  <img src="back4.jpg" class="sub card-img-top" alt="...">
                   <div class="card-body">
-                    <h5 class="card-title">Mathematics</h5>
+                    <h5 class="card-title">Subjects</h5>
+                    <h6>View all the subjects your child is enrolled in, along with course details and learning materials</h6><br>
                     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                   </div>
                 </div>
@@ -130,9 +137,10 @@
               
               <div class="cards">
                 <div class="card">
-                  <img src="back2.jpg" class="sub card-img-top" alt="...">
+                  <img src="back4.jpg" class="sub card-img-top" alt="...">
                   <div class="card-body">
-                    <h5 class="card-title">Mathematics</h5>
+                    <h5 class="card-title">Fees & Payments</h5>
+                    <h6>View pending and completed fee payments, due dates, and download invoices</h6><br>
                     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                   </div>
                 </div>
@@ -140,35 +148,15 @@
               
               <div class="cards">
                 <div class="card">
-                  <img src="back2.jpg" class="sub card-img-top" alt="...">
+                  <img src="back4.jpg" class="sub card-img-top" alt="...">
                   <div class="card-body">
-                    <h5 class="card-title">Mathematics</h5>
+                    <h5 class="card-title">Attendance Summary</h5>
+                    <h6>Monitor your child’s attendance record, including total days present, absent, and attendance percentage.</h6><br>
                     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                   </div>
                 </div>
               </div>
               
-              <div class="cards">
-                <div class="card">
-                  <img src="back2.jpg" class="sub card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Mathematics</h5>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="cards">
-                <div class="card">
-                  <img src="back2.jpg" class="sub card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Mathematics</h5>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
 
       
       <!--CONTENT SHOULD END HERE-->
@@ -207,7 +195,8 @@
       ></a>
 
       <!-- Instagram -->
-      <a
+      <a href ="https://www.instagram.com/"
+      target="_blank"
         class="btn btn-outline btn-floating m-1"
         style="background-color: #ac2bac; border-radius: 50px; width: 30pt; height: 30pt; align-content: center;"
         href="#!"

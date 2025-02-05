@@ -10,7 +10,7 @@ $username = $_SESSION['username'];
 
 <html>
     <head>
-        <title>Student</title>
+        <title>Director Dashboard</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="director.css">
@@ -67,8 +67,8 @@ $username = $_SESSION['username'];
                 <label for="" class="mybnt"> Quick Access</label>
               <button type="button" class="mybnt">Home</button>
               <button type="button" class="mybnt">Photos</button>
-              <a href="applyadmission.php"><button type="button" class="mybnt">Student Addmission</button></a>
-              <a href="user.php"><button type="button" class="mybnt">Add User</button></a>
+              <a href="applyadmission.php?place=director.php"><button type="button" class="mybnt">Student Addmission</button></a>
+              <a href="user.php?place=director.php"><button type="button" class="mybnt">Add User</button></a>
               <button type="button" class="mybnt">Parents</button>
               <button type="button" class="mybnt">Messages</button>
             </blockquote>
@@ -110,7 +110,7 @@ $username = $_SESSION['username'];
               </div>
               <div class="cards">
                 <div class="card">
-                  <a href="selectstudent.php">
+                  <a href="selectstudent.php?place=director.php">
                   <img src="back2.jpg" class="sub card-img-top" alt="..."></a>
                   <div class="card-body">
                     <h5 class="card-title">Students</h5>
@@ -119,7 +119,7 @@ $username = $_SESSION['username'];
               </div>
               <div class="cards">
                 <div class="card">
-                  <a href="viewuser.php">
+                  <a href="viewuser.php?place=director.php">
                   <img src="back2.jpg" class="sub card-img-top" alt="...">
                   </a>
                   <div class="card-body">

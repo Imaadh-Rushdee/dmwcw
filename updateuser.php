@@ -7,6 +7,11 @@ $userid = $_GET['id'];
 $sql = "SELECT * FROM user where user_id = $userid";
 $result = mysqli_query($conn,$sql);
 
+$place = 'default_dashboard.php'; // Fallback if no source provided
+
+if (isset($_GET['place'])) {
+    $place = $_GET['place']; // Get the source page
+}
             
 
 if(mysqli_num_rows($result)> 0){
@@ -36,6 +41,13 @@ if(mysqli_num_rows($result)> 0){
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
+          
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="<?php echo $place; ?>">Dashboard</a>
+              </li>
+          </div>
         </div>
       </div>
     </nav>
@@ -45,7 +57,7 @@ if(mysqli_num_rows($result)> 0){
 
 
     <!--CONTENT SHOULD START FROM HERE-->
-    <form name="newuser"action="updateuser2.php?id=<?php echo $row['user_id']; ?>" method="POST" enctype="multipart/form-data" onsubmit="return doValidation()">
+    <form name="newuser"action="updateuser2.php?id=<?php echo $row['user_id']; ?>&place=<?php echo $place; ?>" method="POST" enctype="multipart/form-data" onsubmit="return doValidation()">
       <div class="studentdata">
         <div class="main-data">
             <div class="tpc"><h2 id="topic">CREATE NEW USER</h2></div>
@@ -73,10 +85,11 @@ if(mysqli_num_rows($result)> 0){
           <label id="age">Email</label><input type="text" id="iage" name="em" class="stddata" value="<?php echo $row['email'];?>" required>
           <label id="dateofbirth">User Type</label>
           <select name="gn" id="type" class="">
-            <option value="Director"  <?php if ($row['usertype'] == 'Director') echo 'selected'; ?>>Director</option>
-            <option value="Teacher"  <?php if ($row['usertype'] == 'Teacher') echo 'selected'; ?>>Teacher</option>
-            <option value="Student"  <?php if ($row['usertype'] == 'Student') echo 'selected'; ?>>Student</option>
-            <option value="Principal"  <?php if ($row['usertype'] == 'Principal') echo 'selected'; ?>>Principal</option>
+            <option value="Director"  <?php if ($row['usertype'] == 'director') echo 'selected'; ?>>Director</option>
+            <option value="Teacher"  <?php if ($row['usertype'] == 'teacher') echo 'selected'; ?>>Teacher</option>
+            <option value="Student"  <?php if ($row['usertype'] == 'student') echo 'selected'; ?>>Student</option>
+            <option value="Principal"  <?php if ($row['usertype'] == 'principal') echo 'selected'; ?>>Principal</option>
+            <option value="parent"  <?php if ($row['usertype'] == 'parent') echo 'selected'; ?>>Parent</option>
           </select>
           <label id="adress">Adress</label><input type="text" id="add" name="ad" class="stddata" value="<?php echo $row['adress'];?>" required>
           <label id="mothersname">Username</label><input type="text" id="mname" name="mn" class="stddata" value="<?php echo $row['username'];?>" required>

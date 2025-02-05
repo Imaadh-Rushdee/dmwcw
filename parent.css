@@ -1,0 +1,213 @@
+/* General Styles */
+.pg {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.fotcol {
+    width: 831pt;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px; /* Added padding */
+    box-sizing: border-box;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-collapse {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.cardgroup {
+    display: flex;
+    padding-top: 20pt;
+    padding-bottom: 20pt;
+    justify-content: space-evenly;
+    row-gap: 15pt;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.cards {
+    border-radius: 10pt;
+    width: 340px;
+    height: min-content;
+}
+
+.sub {
+    width: 120px;
+    height: 100px;
+}
+
+#subject2 {
+    border-radius: 10pt;
+    width: 120px;
+    height: 100px;
+}
+
+.msg {
+    border: 1pt;
+    border-radius: 10pt;
+    border-color: rgb(0, 0, 0);
+    width: 300pt;
+    height: 400pt;
+    border-style: solid;
+    padding-top: 10pt;
+    padding-left: 20pt;
+    padding-right: 10pt;
+    padding-bottom: 10pt;
+    background: rgba(red, green, blue, alpha);
+    margin: auto;
+    box-shadow: 50pt 50pt 50pt 50pt rgba(0, 0, 0, 0);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.named {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0px;
+}
+
+#footerp {
+    font-size: 10pt;
+}
+
+.mybnt {
+    display: flex;
+    padding-left: 15px;
+    width: 170pt;
+    height: 30pt;
+    border-radius: 0;
+    font-size: 12pt;
+    align-items: center;
+    border: 0;
+    transition: all ease-out 300ms;
+    flex-shrink: 1; /* Shrink button */
+    margin-bottom: 5px;
+}
+
+.mybnt:hover {
+    border: 1;
+    border-color: blue;
+    background-color: darkblue;
+    color: aliceblue;
+}
+
+#msgtxt {
+    font-size: 20pt;
+}
+
+#bntcard {
+    max-height: 100%;
+    max-width: 100%;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.rec {
+    display: flex;
+    left: 15px;
+    top: 80pt;
+    width: fit-content;
+    row-gap: 0;
+    flex-wrap: wrap;
+    flex-shrink: 1; /* Allow shrinking */
+    flex-grow: 0;
+    position: fixed;
+}
+
+.rec3 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+/* Media Query for Mobile (below 768px) */
+@media (max-width: 1580px) {
+    .rec {
+        display: none; /* Hide .rec div on smaller screens (below 768px) */
+    }
+}
+
+/* Media Query for Screens below 1650px but above 768px */
+@media (max-width: 1650px) {
+    .rec {
+        flex-shrink: 1; /* Allow shrinking */
+        flex-grow: 0; /* Prevent expanding */
+        width: fit-content; /* Shrink to a width of 250px */
+    }
+
+    /* Shrink buttons inside .rec */
+    .mybnt {
+        width: 70%;
+        font-size: 10pt; /* Smaller font */
+    }
+}
+
+/* Media Query for Screens below 1050px */
+@media (max-width: 1700px) {
+    .rec {
+        flex-shrink: 1; /* Allow shrinking */
+        flex-grow: 0; /* Prevent expanding */
+        width: fit-content; /* Shrink to a width of 250px */
+    }
+
+    .mybnt {
+        width: 150px;
+        font-size: 10pt; /* Smaller font */
+    }
+}
+
+/* Footer responsiveness */
+.page-footer {
+    width: 100%;
+    position: relative;
+}
+
+.fotcol {
+    width: 100%;
+}
+
+footer.pg {
+    padding: 20px 10px;
+    background-color: rgba(24, 18, 85, 0.904);
+}
+
+footer .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+footer .btn {
+    width: 35px;
+    height: 35px;
+    margin: 5px;
+}

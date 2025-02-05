@@ -1,3 +1,13 @@
+<?php
+
+include 'Database.php';
+
+$place = 'default_dashboard.php'; // Fallback if no source provided
+
+if (isset($_GET['place'])) {
+    $place = $_GET['place']; // Get the source page
+}
+?>
 <html>
     <head>
         <title>Create New User</title>
@@ -25,6 +35,13 @@
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
+          
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="<?php echo $place; ?>">Dashboard</a>
+              </li>
+          </div>
         </div>
       </div>
     </nav>
@@ -34,7 +51,7 @@
 
 
     <!--CONTENT SHOULD START FROM HERE-->
-    <form name="newuser" action="adduser.php" method="POST" enctype="multipart/form-data" onsubmit="return doValidation()">
+    <form name="newuser" action="adduser.php?place=<?php echo $place; ?>" method="POST" enctype="multipart/form-data" onsubmit="return doValidation()">
       <div class="studentdata">
         <div class="main-data">
             <div class="tpc"><h2 id="topic">CREATE NEW USER</h2></div>
@@ -61,6 +78,7 @@
             <option value="teacher">Teacher</option>
             <option value="student">Student</option>
             <option value="principal">Principal</option>
+            <option value="parent">Parent</option>
           </select>
           <label id="adress">Adress</label><input type="text" id="add" name="ad" class="stddata" required>
           <label id="mothersname">Username</label><input type="text" id="mname" name="mn" class="stddata" required>

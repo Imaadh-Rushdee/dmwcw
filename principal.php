@@ -1,9 +1,9 @@
 <html>
     <head>
-        <title>Student</title>
+        <title>principal</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="student.css">
+        <link rel="stylesheet" href="principal.css">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
@@ -12,10 +12,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
     </head>
-    <body><nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+    <body>
+      <div class="main">
+      <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
 
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
+          <a class="navbar-brand" href="#">LOGO</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -32,10 +34,10 @@
                   Dropdown
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Reports</a></li>
+                  <li><a class="dropdown-item" href="#">Departments</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  <li><a class="dropdown-item" href="login.php">Log Out</a></li>
                 </ul>
               </li>
               <li class="nav-item">
@@ -49,17 +51,19 @@
           </div>
         </div>
       </nav>
+      
       <br><br>
-      <div class="rec container">
+      
+      <div class="rec">
         <div class="rec3 card">
           <div class="card-body" id="rec2">
-            <blockquote class="blockquote mb-0" id="rec5">
+                <label for="" class="mybnt"> Quick Access</label>
               <button type="button" class="mybnt">Home</button>
               <button type="button" class="mybnt">Photos</button>
-              <button type="button" class="mybnt">example</button>
-              <button type="button" class="mybnt">example2</button>
-              <button type="button" class="mybnt">example3</button>
-              <button type="button" class="mybnt">example4</button>
+              <button type="button" class="mybnt">Manage Subjects</button>
+              <button type="button" class="mybnt">Exams</button>
+              <button type="button" class="mybnt">Parents</button>
+              <button type="button" class="mybnt">Messages</button>
             </blockquote>
           </div>
         </div>
@@ -84,26 +88,28 @@
             </div>
           </div>
           <br><br>
-          <h3>Hello Student!</h3>
+          <h3>Welcome Principal!</h3>
           <br><br>
           
           <div class="card-group">
             <div class="cardgroup">
               <div class="cards">
                 <div class="card">
+                  <a href="details.php?place=principal.php&type=Student">
                   <img src="back2.jpg" class="sub card-img-top" alt="...">
+                  </a>
                   <div class="card-body">
-                    <h5 class="card-title">History</h5>
+                    <h5 class="card-title">Student detais</h5>
                     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                   </div>
                 </div>
               </div>
               <div class="cards">
                 <div class="card">
-                  <a href="login.html">
+                  <a href="details.php?place=principal.php&type=Teacher">
                   <img src="back2.jpg" class="sub card-img-top" alt="..."></a>
                   <div class="card-body">
-                    <h5 class="card-title">Science</h5>
+                    <h5 class="card-title">Teachers details</h5>
                     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                   </div>
                 </div>
@@ -112,7 +118,7 @@
                 <div class="card">
                   <img src="back2.jpg" class="sub card-img-top" alt="...">
                   <div class="card-body">
-                    <h5 class="card-title">Mathematics</h5>
+                    <h5 class="card-title">Reports</h5>
                     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                   </div>
                 </div>
@@ -122,52 +128,11 @@
                 <div class="card">
                   <img src="back2.jpg" class="sub card-img-top" alt="...">
                   <div class="card-body">
-                    <h5 class="card-title">Mathematics</h5>
+                    <h5 class="card-title">Announcements</h5>
                     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                   </div>
                 </div>
               </div>
-              
-              <div class="cards">
-                <div class="card">
-                  <img src="back2.jpg" class="sub card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Mathematics</h5>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="cards">
-                <div class="card">
-                  <img src="back2.jpg" class="sub card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Mathematics</h5>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="cards">
-                <div class="card">
-                  <img src="back2.jpg" class="sub card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Mathematics</h5>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="cards">
-                <div class="card">
-                  <img src="back2.jpg" class="sub card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Mathematics</h5>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
 
       
@@ -236,12 +201,13 @@
   <!-- Grid container -->
 
   <!-- Copyright -->
-  <div class="fotcol text-center p-3" style="background-color: rgba(24, 18, 85, 0.904);">
+  <div class="fotcol text-center p-3" id="coppy" style="background-color: rgba(24, 18, 85, 0.904); ">
     © 2020 Copyright:
     <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
   </div>
   <!-- Copyright -->
 </footer>
+</div>
 </div>
 
     </body>

@@ -1,5 +1,7 @@
 <?php
 include 'Database.php';
+$place = 'default_dashboard.php'; // Fallback if no source provided
+
 
 $sql = "SELECT addNo FROM student ORDER BY addNo DESC LIMIT 1";
 $result = $conn->query($sql);
@@ -10,6 +12,10 @@ if ($result->num_rows > 0) {
     // Fetch the last addNo
     $row = $result->fetch_assoc();
     $lastAddNo = $row['addNo'];
+}
+
+if (isset($_GET['place'])) {
+  $place = $_GET['place']; // Get the source page
 }
 
 $newAddNo = $lastAddNo + 1;
@@ -45,12 +51,19 @@ $conn->close();
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
+          
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="<?php echo $place; ?>">Dashboard</a>
+              </li>
+          </div>
         </div>
       </div>
     </nav>
     
     <!--CONTENT SHOULD START FROM HERE-->
-    <form name="newstudent" action="newstudent.php" method="POST" enctype="multipart/form-data" onsubmit="return doValidation()">
+    <form name="newstudent" action="newstudent.php?place=<?php echo $place; ?>" method="POST" enctype="multipart/form-data" onsubmit="return doValidation()">
       <div class="studentdata">
         <div class="main-data">
           <div class="box">
@@ -108,7 +121,7 @@ $conn->close();
           <label id="fathersname">Fathers Name</label><input type="text" id="ftname" name="fgn" class="stddata" required>
           <label id="fathercontact">Fathers Contact No.</label><input type="number" id="ftcno" name="fc" class="stddata" required>
           <div class="bnt">
-            <input type="submit" id="update" name="update" value="Add Student" onclick="doValidation()">
+            <input type="submit" id="update" name="update" value="Add Student">
           </div>
         </div>
       </div>

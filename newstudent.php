@@ -1,6 +1,11 @@
 <?php 
 
 include 'Database.php';
+$place = 'default_dashboard.php'; // Fallback if no source provided
+
+if (isset($_GET['place'])) {
+    $place = $_GET['place']; // Get the source page
+}
 
 $firstName = $_POST['fn'];
 $lastName = $_POST['ln'];
@@ -22,24 +27,33 @@ $currentGrade = $_POST['cg'];
 
     if (move_uploaded_file($product_image["tmp_name"], $image_path))
     {
+    }
+
+    else {
+        
+        echo "<script>
+alert('Photo was Not Uploaded');
+</script>";
+$image_path = "no image";
+    }
+    
 
 $sql = "INSERT INTO student(firstname,lastname,adress,gender,age,dob,doa,mname,fname,mcontact,fgcontact,currentgrade,studentphoto,imagename) 
-        VALUES('$firstName','$lastName','$adress','$gender','$age','$dob','$doa','$mname','$fname','$mcontact','$fgcontact','$currentGrade','$image_path','$image_name')";
+VALUES('$firstName','$lastName','$adress','$gender','$age','$dob','$doa','$mname','$fname','$mcontact','$fgcontact','$currentGrade','$image_path','$image_name')";
 
 
 $result = mysqli_query($conn, $sql);
 
 if($result == true)
 {
-    echo "New Record Inserted";
+echo "<script>
+    alert('Record Added successfully.');
+    window.location.href = 'selectstudent.php?grade=$currentGrade &place=$place';
+  </script>";
+exit;
 }
 else
 {
-    echo "Error" . $sql . "<br>" . mysqli_error($conn);
+echo "Error" . $sql . "<br>" . mysqli_error($conn);
 }
-    }
-
-    else {
-        echo "Failed to upload the image.";
-    }
 ?>

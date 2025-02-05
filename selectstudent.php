@@ -1,12 +1,20 @@
 <?php
 include 'Database.php';
-$grade = 0;
-if (isset($_GET['grade'])) {
-  $grade = (int) $_GET['grade']; // Cast to integer to ensure security
-}
-$sql = "SELECT * FROM student where currentgrade = $grade";
-$result = mysqli_query($conn,$sql);
 
+$grade = 0;
+
+if (isset($_GET['grade'])) {
+    $grade = (int) $_GET['grade']; // Cast to integer for security
+}
+$place = 'default_dashboard.php'; // Fallback if no source provided
+
+if (isset($_GET['place'])) {
+    $place = $_GET['place']; // Get the source page
+}
+
+// Example query to retrieve data
+$sql = "SELECT * FROM student WHERE currentgrade = $grade";
+$result = mysqli_query($conn, $sql);
 ?>
 <html>
     <head>
@@ -34,11 +42,7 @@ $result = mysqli_query($conn,$sql);
 function confirmDelete() {
     return confirm("Are you sure you want to delete this student record?");
 }
-</script>
-
-
-
-    
+</script> 
     </head>
     <body>
 
@@ -49,6 +53,12 @@ function confirmDelete() {
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="<?php echo $place; ?>">Dashboard</a>
+              </li>
+          </div>
           </div>
         </div>
       </nav>
@@ -63,7 +73,7 @@ function confirmDelete() {
                 <div class="up">
                         <label id="cardname" name="heading">Grade <?php echo $grade;?></label>
                         <div class="col-md-6" id="search">
-                          <form class="myf d-flex" action="updatestudent.php" method="GET">
+                          <form class="myf d-flex" action="updatestudent.php?place=<?php echo $place; ?>" method="GET">
                             <div class="input-group">
                            <input 
                                class="form-control form-control-lg" 
@@ -80,7 +90,7 @@ function confirmDelete() {
                             </form>
 
                         </div>
-                        <a href="applyadmission.php">
+                        <a href="applyadmission.php?place=<?php echo $place; ?>">
                           <button class="btn btn-primary" type="submit" style="height: 45px; width: 120px; color: white;">
                             New Student
                           </button>
@@ -131,7 +141,7 @@ function confirmDelete() {
                     <td><?php echo $row['firstname'];?></td>
                     <td><?php echo $row['lastname'];?></td>
                     <td><?php echo $row['currentgrade'];?></td>
-                    <td><a href="updatestudent.php?id=<?php echo $row['addNo']; ?>" id="upd">Update</a> &nbsp; &nbsp;<a href="deletestudent.php?id=<?php echo $row['addNo']; ?>" onclick="return confirmDelete();" id="del">Delete</a></td>
+                    <td><a href="updatestudent.php?id=<?php echo $row['addNo']; ?>&place=<?php echo $place; ?>" id="upd">Update</a> &nbsp; &nbsp;<a href="deletestudent.php?id=<?php echo $row['addNo']; ?>" onclick="return confirmDelete();" id="del">Delete</a></td>
                   </tr>
                   <?php 
                       }

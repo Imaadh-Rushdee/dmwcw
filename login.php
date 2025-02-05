@@ -29,16 +29,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     header('Location: director.php');
                     exit();
                 case 'principal':
-                    header('Location: principal.html');
+                    header('Location: principal.php');
                     exit();
                 case 'student':
-                    header('Location: student.html');
+                    header('Location: student.php');
                     exit();
                 case 'parent':
-                    header('Location: parent.html');
+                    header('Location: parent.php');
                     exit();
                 case 'teacher':
-                    header('Location: teacher.html');
+                    header('Location: teacher.php');
                     exit();
                 default:
                     echo "No Valid User";
