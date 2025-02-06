@@ -1,6 +1,9 @@
 # Use an official PHP image with Apache
 FROM php:8.1-apache
 
+# Install the mysqli extension
+RUN docker-php-ext-install mysqli
+
 # Set the working directory inside the container
 WORKDIR /var/www/html/
 
