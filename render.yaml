@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: my-php-app
+    env: docker
+    build:
+      dockerfilePath: ./Dockerfile
+    plan: free
+    deploy:
+      branch: master
