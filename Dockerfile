@@ -5,10 +5,10 @@ FROM php:8.1-apache
 RUN docker-php-ext-install mysqli
 
 # Set the working directory inside the container
-WORKDIR /var/www/html/
+WORKDIR /var/www/Course Work/
 
 # Copy your project files into the container
-COPY . /var/www/html/
+COPY . /var/www/Course Work/
 
 # Enable Apache mod_rewrite (if using frameworks like Laravel)
 RUN a2enmod rewrite
